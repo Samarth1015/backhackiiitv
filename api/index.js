@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
-const Team = require("./model/schema");
 const cors = require("cors");
+const Team = require("../model/schema");
 
 dotenv.config();
 const app = express();
@@ -34,4 +34,9 @@ app.post("/api", async (req, res) => {
   }
 });
 
+app.get("/", async (req, res) => {
+  res.send("Hello World!");
+  return;
+});
+3;
 module.exports = app;
